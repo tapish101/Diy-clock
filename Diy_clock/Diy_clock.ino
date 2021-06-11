@@ -1,6 +1,6 @@
-#define MOTOR_PIN 5                  
-#define STOP_PIN 6
-#define IR_READ 2                    
+#define MOTOR_PIN 5   //pin that drive motor               
+#define STOP_PIN 6   //to accurately stop motor
+#define IR_READ 2    //intruppt pin from IR sensor              
 
 int sec=0;
 int hour=0;
@@ -9,7 +9,7 @@ bool state=true;
 
 void setup(){
   Serial.begin(9600);
-  digitalWrite(STOP_PIN,LOW);
+  digitalWrite(STOP_PIN,LOW);              
   attachInterrupt(0,STATE,RISING);
   cli();
 
